@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block body %}
+    <section class="product_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="product_list_title">Все товары</h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-4">
+                        <a class="product" href="{{product.get_absolute_url}}">
+                            <img src="{{ product.images.first.image.url }}" alt="product_img" class="product_img">
+                            <div class="product_body">
+                                <h3 class="product_name">Светильник {{ product.name}}</h3>
+                                <p class="product_descr"></p>
+                                <span class="product_price">6754₽</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

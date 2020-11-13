@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block body %}
+    <section class="product_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product_img">
+                            <img src="{{ product.images.first.image.url }}" alt="product_img">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product_info">
+                            <h2 class="product_name">Светильник {{ product.name}}</h2>
+                            <p class="product_descr">
+                                {{ product.description|safe}}
+                            </p>
+                            <p class="product_price">
+                                {{ product.price}}₽
+                                <a href="#product_order">Заказать</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="product_assets">
+                            <li data-name="spec">Характеристики</li>
+{#                            <li data-name="descr"></li>#}
+                    </ul>
+                    <div class="product_assets-item" data-name="spec">
+{#                        <ul>#}
+{#                                <li><span>Гарбариты: </span>150*100*300</li>#}
+{#                                <li><span>Цвета: </span>Черный,Белый,Серый</li>#}
+{#                                <li><span>Мощность: </span>200w</li>#}
+{#                            </ul>#}
+                    </div>
+{#                    <div class="product_assets-item" data-name="descr">#}
+{#                        #}
+{#                    </div>#}
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product_order" id="product_order">
+                            <h3>Быстрый заказ</h3>
+                            <form method="post" action="{% url 'send' %}" id="send_post">
+                                {% csrf_token %}
+                                <input type="hidden" name="product" value="{{ product.pk }}">
+                                <div class="input_block">
+                                    <p>Имя</p>
+                                    <input type="text" name="name">
+                                </div>
+                                <div class="input_block">
+                                    <p>Почта</p>
+                                    <input type="text" name="email">
+                                </div>
+                                <div class="input_block">
+                                    <p>Телефон</p>
+                                    <input type="text" class="mask-phone" name="phone">
+                                </div>
+                                <button>Заказать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
