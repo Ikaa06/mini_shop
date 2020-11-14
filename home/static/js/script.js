@@ -659,9 +659,11 @@ for(let item of document.querySelectorAll(".product_assets-item")){
 		}
 	});
 }());
-document.querySelector(".req > .close").onclick = ()=>{
-	document.querySelector(".req_wrapper").classList.add("d-none")
-}
-document.querySelector(".on_req").onclick = ()=>{
-	document.querySelector(".req_wrapper").classList.remove("d-none")
+if(document.querySelector(".on_req")){
+	document.querySelector(".req > .close").onclick = ()=>{
+		document.querySelector(".req_wrapper").classList.add("d-none")
+	}
+	document.querySelector(".on_req").onclick = ()=>{
+		document.querySelector(".req_wrapper").classList.remove("d-none")
+	}	
 }
