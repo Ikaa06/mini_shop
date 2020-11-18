@@ -6114,3 +6114,6 @@ html.rd-navbar-fixed-linked header {
 	font-weight: 600;
 	box-shadow: 3px 3px 10px rgba(94, 67, 67, 0.25);
 }
+.swiper-button-next, .swiper-button-prev{
+	color: #222;
+}
