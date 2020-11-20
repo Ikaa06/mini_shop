@@ -5987,10 +5987,11 @@ html.rd-navbar-fixed-linked header {
 	border-bottom: 2px solid #FFDC25 ;
 }
 .product_assets-item{
-	height: 100px;
+	min-height: 100px;
 	padding: 20px;
 	display: flex;
 	justify-content: center;
+	max-height: 700px;
 }
 .product_assets-item ul{
 	margin: 0 auto;
@@ -6092,6 +6093,18 @@ html.rd-navbar-fixed-linked header {
 	transition: all .2s ease;
 }
 @media screen and (max-width:768px){
+	.product_order form{
+		flex-direction: column;
+	}
+	.product_order form .input_block{
+		width: 100%;
+	}
+	.product_order form input{
+		width: 100%;
+	}
+	.product_order form button{
+		width: 100%;
+	}
 	.on_req{
 		width: 100%;
 		white-space: wrap;
