@@ -663,7 +663,9 @@ if(document.querySelector(".on_req")){
 	document.querySelector(".req > .close").onclick = ()=>{
 		document.querySelector(".req_wrapper").classList.add("d-none")
 	}
-	document.querySelector(".on_req").onclick = ()=>{
-		document.querySelector(".req_wrapper").classList.remove("d-none")
-	}	
+	for(let btn of document.querySelectorAll(".on_req") ){
+		btn.onclick = ()=>{
+			document.querySelector(".req_wrapper").classList.remove("d-none")
+		}	
+	}
 }
