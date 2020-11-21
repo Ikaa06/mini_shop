@@ -2456,7 +2456,8 @@ textarea.form-input {
 }
 
 .post-classic-figure img {
-	width: 100%;
+	width: 300px;
+	height: 500px;
 }
 
 .post-classic-figure + .post-classic-title {
@@ -5693,9 +5694,7 @@ html.rd-navbar-fixed-linked header {
 	content: '\ec44';
 }
 
-.owl-carousel-classic .owl-item.center .post-classic-figure {
-	box-shadow: 10px 35px 40px rgba(0, 0, 0, 0.2);
-}
+
 
 .owl-carousel-modern .owl-dots {
 	text-align: left;
@@ -5902,7 +5901,8 @@ html.rd-navbar-fixed-linked header {
 }
 .product .product_img{
 	display: block;
-	max-width: 300px;
+	width: 300px;
+	height: 400px;
 	height: auto;
 	margin: 0 auto;
 }
